@@ -22,19 +22,29 @@ const addFavorite = (req, res, next) => {
     res.status(200).json(favorites);
 };
 
+const updateTitle = (req, res, next) => {
+    title=req.params.id;
+    res.status(200).json
+}
+
 const editFavorite = (req, res, next) => {
-    // let index = favorites.findIndex(e => e.id===req.params.id)
-    // console.log(req.params.id)
+    let { id } = req.params;
+    let { joke } = req.body;
+    let index = favorites.findIndex(e => e.id===parseInt(id))
+    favorites[index] = {joke, id: parseInt(id)}
+    newId++;
+    console.log(id)
+    // console.log(favorites)
     // console.log(index)
-    favorites.forEach(joke => {
-        if (joke.id===req.params.id) {
-            joke ={
-             joke: req.body.joke,
-            //  id: joke.id
-            }
-            }
-    })
-    console.log(favorites)
+    // favorites.forEach(joke => {
+    //     if (joke.id===req.params.id) {
+    //         joke ={
+    //          joke: req.body.joke,
+    //         //  id: joke.id
+    //         }
+    //         }
+    // })
+    // console.log(favorites)
     res.status(200).json(favorites);
 };
 

@@ -18,7 +18,7 @@ export default class RandomJokesGen extends Component {
         this.addFavorite = this.addFavorite.bind(this);
         // this.getFavorites = this.getFavorites.bind(this);
         this.deleteFavorite = this.deleteFavorite.bind(this);
-
+        this.editFavorite = this.editFavorite.bind(this)
     }
 
     componentDidMount(){
@@ -43,7 +43,15 @@ export default class RandomJokesGen extends Component {
             // console.log("add fev response: ", response)
             this.setState({ favJokes: response.data})
         });
+        this.randomJoke();
+    }
 
+    editFavorite(joke, id) {
+        axios.put(`/api/jokes/${id}`, {joke})
+        .then(response => {
+            console.log(response.data);
+           this.setState({ favJokes: response.data})
+        })
     }
 
     getFavorites(){
@@ -57,10 +65,9 @@ export default class RandomJokesGen extends Component {
 
     render() {
         const { joke, favJokes } = this.state;
-        console.log(favJokes);
+        // console.log(favJokes);
         
         return(
-        //NEED DELETE BUTTON
         
         <div className="RandomJokesGen">
             <div className="background"></div>
@@ -80,7 +87,7 @@ export default class RandomJokesGen extends Component {
             <div className="favorites-list">
                 <FavoritesList 
                 favJokes={favJokes}
-                
+                edit={this.editFavorite}
                 delete={this.deleteFavorite}
                 />
             </div>

@@ -20,32 +20,36 @@ class FavoritesList extends Component {
     }
 
     updateJoke(id){
-        axios.put(`/api/jokes/${id}`, {joke: this.state.userInput, id: id})
-        .then(response => {
-            console.log(response.data);
-           this.setState({ favJokes: response.data})
+        this.props.edit(this.state.userInput, id)
+        this.setState({
+            userInput: ""
         })
     };
 
     editFavorite(value){
+        console.log(value)
         this.setState({userInput : value})
     }
 
     render(){
-        console.log(this.state.favJokes);
-        console.log(this.state.userInput)
+        // console.log(this.state.favJokes);
+        // console.log(this.state.userInput)
         let favorites = this.props.favJokes.map((e,i)=> (
-            <div key={e.id} className="fav-item" 
-            onClick={() => this.props.delete(e.id)}
-            >
-
+            <div key={e.id} className="fav-item">
             <p className="joke">{e.joke}</p>
-
-            {/* EDIT FUNCTIONALITY */}
-            <input onChange={(e) => this.editFavorite(e.target.value)}/>
-           <button className="updatejoke" onClick={() => this.updateJoke(e.id)}>
-            click</button>
+            <div className = "editing">
+            <input className="inputfield" value={this.state.userInput} onChange={e => this.editFavorite(e.target.value)}/>
+            <button className="updatejoke" onClick={() => this.updateJoke(e.id)}>
+           UPDATE</button>
+           <button className="deletebutton" onClick={() => this.props.delete(e.id)}>DELETE</button>
+           </div>
             </div>
+            /* <p className="joke">{e.joke}</p> */
+
+            /* EDIT FUNCTIONALITY */
+            /* <input onChange={e => this.editFavorite(e.target.value)}/>
+           <button className="updatejoke" onClick={(e) => this.updateJoke(e.id)}> */
+            /* click</button> */
         ));
     
         return(

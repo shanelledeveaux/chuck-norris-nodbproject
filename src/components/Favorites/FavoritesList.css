@@ -11,3 +11,83 @@
     text-shadow: 1px 1px black;
     background: #2DC6C0;
 }
+
+.updatejoke {
+    border-top: 1px solid #f797e9;
+    background: #65a5d6;
+    
+    background: -webkit-linear-gradient(top, #9a3e9c, #65a5d6);
+    background: -moz-linear-gradient(top, #9a3e9c, #65a5d6);
+    background: -ms-linear-gradient(top, #9a3e9c, #65a5d6);
+    background: -o-linear-gradient(top, #9a3e9c, #65a5d6);
+    padding: 7px 12px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    border-radius: 22px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 12px;
+    font-family: Georgia, serif;
+    text-decoration: none;
+    vertical-align: middle;
+        
+}
+
+.updatejoke:hover {
+    border-top-color: #512878;
+    background: #512878;
+    color: #ccc;
+    }
+ .updatejoke:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+    }
+
+
+    .deletebutton {
+        border-top: 1px solid #f797e9;
+        background: #65a5d6;
+        
+        background: -webkit-linear-gradient(top, #9a3e9c, #65a5d6);
+        background: -moz-linear-gradient(top, #9a3e9c, #65a5d6);
+        background: -ms-linear-gradient(top, #9a3e9c, #65a5d6);
+        background: -o-linear-gradient(top, #9a3e9c, #65a5d6);
+        padding: 7px 12px;
+        -webkit-border-radius: 22px;
+        -moz-border-radius: 22px;
+        border-radius: 22px;
+        -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        box-shadow: rgba(0,0,0,1) 0 1px 0;
+        text-shadow: rgba(0,0,0,.4) 0 1px 0;
+        color: white;
+        font-size: 12px;
+        font-family: Georgia, serif;
+        text-decoration: none;
+        vertical-align: middle;     
+    }
+    
+    .deletebutton:hover {
+        border-top-color: #512878;
+        background: #512878;
+        color: #ccc;
+        }
+     .deletebutton:active {
+        border-top-color: #1b435e;
+        background: #1b435e;
+        }
+
+.inputfield{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: italic;
+    font-size: 20px;
+    font-family: Georgia, serif;
+}

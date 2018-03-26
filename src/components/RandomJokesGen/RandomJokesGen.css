@@ -69,6 +69,10 @@
     overflow-y:scroll;
 }
 
+.editing{
+    padding: 10px;
+}
+
 .joketext {
     font-family: 'Press Start 2P', cursive;
     color: #812D1D;
@@ -80,4 +84,6 @@
 .buttons {
     display:flex;
     align-items: center;
+    padding: 15px;
 }
+
