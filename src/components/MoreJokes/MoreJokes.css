@@ -1,0 +1,34 @@
+.new-joke-button {
+    border-top: 1px solid #f797e9;
+    background: #65a5d6;
+    /* background: -webkit-gradient(linear, left top, left bottom, from(#9a3e9c), to(#65a5d6)); */
+    background: -webkit-linear-gradient(top, #9a3e9c, #65a5d6);
+    background: -moz-linear-gradient(top, #9a3e9c, #65a5d6);
+    background: -ms-linear-gradient(top, #9a3e9c, #65a5d6);
+    background: -o-linear-gradient(top, #9a3e9c, #65a5d6);
+    padding: 9px 18px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    border-radius: 22px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 19px;
+    font-family: Georgia, serif;
+    text-decoration: none;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.new-joke-button:hover {
+    border-top-color: #512878;
+    background: #512878;
+    color: #ccc;
+}
+
+.new-joke-button:active{
+    border-top-color: #1b435e;
+    background: #1b435e;
+}

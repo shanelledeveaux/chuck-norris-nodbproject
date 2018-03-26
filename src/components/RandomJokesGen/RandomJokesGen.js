@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import axios from "axios";
 import FavoritesList from "../Favorites/FavoritesList";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
+import MoreJokes from "../MoreJokes/MoreJokes"
 import "./RandomJokesGen.css";
 
 export default class RandomJokesGen extends Component {
@@ -49,8 +50,8 @@ export default class RandomJokesGen extends Component {
         axios.get("/api/jokes").then(response => this.setState({ favJokes: response.data}));
     }
 
-    deleteFavorite(joke){
-        axios.delete(`/api/jokes/${joke}`)
+    deleteFavorite(id){
+        axios.delete(`/api/jokes/${id}`)
         .then(response => this.setState({ favJokes: response.data }));
     }
 
@@ -69,10 +70,10 @@ export default class RandomJokesGen extends Component {
             <div className = "main">
                 <div className = "joketext">{joke}</div>
                 <div className="buttons">
-                    <button className = "new-joke-button" onClick={()=>this.randomJoke()}>
-                        MORE FUNNY
-                    </button>
+                    <MoreJokes randomJoke={()=>this.randomJoke()} />
+                    <div>
                     <FavoriteButton add={this.addFavorite}/>
+                    </div>
                 </div>
             </div> 
                 

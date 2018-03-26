@@ -34,7 +34,7 @@
 }
 .main{
     width: 80%;
-    height: 25vh;
+    min-height: 25vh;
     margin:0 auto;
     padding: 4vh 7vw;
     display: flex;
@@ -42,13 +42,15 @@
     justify-content: space-around;
     align-items: center;
     background-color: white;
-    border: 1px solid black;
+    border: 5px solid black;
+    border-radius: 25px;
     opacity: 0.8;
     filter: alpha(opacity=6);
 }
 
 .favorites-list {
-    align-self: center;height: 40vh;
+    align-self: center;
+    height: 40vh;
     width: 80%;
     margin: 0 auto;
     background: gray;
@@ -60,13 +62,22 @@
     color:black;
     background-color: white;
     opacity: .8;
-    border: 1px solid black;
-
+    border: 5px solid black;
+    border-radius: 25px;
+    text-align: center;
+    overflow-x:hidden;
+    overflow-y:scroll;
 }
 
 .joketext {
     font-family: 'Press Start 2P', cursive;
     color: #812D1D;
-    text-shadow: 1px 1px gray;
+    text-shadow: 1px 1px black;
+    align-self: center;
+    text-align: center;
 }
 
+.buttons {
+    display:flex;
+    align-items: center;
+}
