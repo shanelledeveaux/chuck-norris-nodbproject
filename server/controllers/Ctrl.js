@@ -21,7 +21,7 @@ const addFavorite = (req, res, next) => {
 };
 
 const editFavorite = (req, res, next) => {
-
+    favorites.push(req.body.quote);
 };
 
 const deleteFavorite = (req, res, next) => {

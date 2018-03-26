@@ -1,0 +1,11 @@
+.fav-item {
+    display: inline-block;
+    /* position:absolute; */
+    width: 95%;
+    margin:10px;
+    border: 1px solid black;
+    font-family: 'Press Start 2P', cursive;
+    color: #812D1D;
+    text-shadow: 1px 1px gray;
+    background: #2DC6C0;
+}
